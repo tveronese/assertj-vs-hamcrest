@@ -9,31 +9,26 @@ import org.junit.Test;
 
 public class OptionalAssertions {
 
-    @Test
-    public void shouldTestOptionalAssertJ() {
-        // optional with value
-        Optional<String> optional = Optional.of("Test");
-        Assertions.assertThat(optional).isPresent()
-                .contains("Test");
-        // empty optional
-        Optional<Object> emptyOptional = Optional.empty();
-        Assertions.assertThat(emptyOptional).isEmpty();
-    }
+	@Test
+	public void shouldTestOptionalAssertJ() {
+		// optional with value
+		Optional<String> optional = Optional.of("Test");
+		Assertions.assertThat(optional).isPresent().contains("Test");
+		// empty optional
+		Optional<Object> emptyOptional = Optional.empty();
+		Assertions.assertThat(emptyOptional).isEmpty();
+	}
 
-    @Test
-    public void shouldTestOptionalHamcrest() {
-        // optional with value
-        Optional<String> optional = Optional.of("Test");
-        MatcherAssert.assertThat(optional.isPresent(),
-                Matchers.is(true));
-        MatcherAssert.assertThat(optional.get(),
-                Matchers.equalTo("Test"));
+	@Test
+	public void shouldTestOptionalHamcrest() {
+		// optional with value
+		Optional<String> optional = Optional.of("Test");
+		MatcherAssert.assertThat(optional.isPresent(), Matchers.is(true));
+		MatcherAssert.assertThat(optional.get(), Matchers.equalTo("Test"));
 
-        // empty optional
-        Optional<Object> emptyOptional = Optional.empty();
-        MatcherAssert
-                .assertThat(emptyOptional, Matchers
-                        .equalTo(Optional.<Object> empty()));
-    }
+		// empty optional
+		Optional<Object> emptyOptional = Optional.empty();
+		MatcherAssert.assertThat(emptyOptional, Matchers.equalTo(Optional.<Object> empty()));
+	}
 
 }

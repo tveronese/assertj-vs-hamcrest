@@ -2,16 +2,16 @@ package com.assertj.vs.hamcrest;
 
 public enum Race {
 
-    HOBBIT("Hobbit"), MAN("Man");
+	HOBBIT("Hobbit"), MAN("Man");
 
-    private String name;
+	private String name;
 
-    private Race(String name) {
-        this.name = name;
-    }
+	private Race(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return this.name;
-    }
+	public String getName() {
+		return this.name;
+	}
 
 }
