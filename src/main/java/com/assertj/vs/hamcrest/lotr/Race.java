@@ -1,4 +1,4 @@
-package com.assertj.vs.hamcrest;
+package com.assertj.vs.hamcrest.lotr;
 
 public enum Race {
 
